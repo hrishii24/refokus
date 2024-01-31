@@ -15,8 +15,6 @@ function Marquees() {
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676ce60ad15178cb802_remind.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676418e44be467584c5_mint%20w.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576766a98bf28d587c69b_accel.svg",
-    ],
-    [
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576760319d7680c72bdc3_yahoo-white.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676fe55f16782a900fd_spotify.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576761f08ef9cb13e81f2_mural.svg",
@@ -29,11 +27,43 @@ function Marquees() {
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676418e44be467584c5_mint%20w.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576766a98bf28d587c69b_accel.svg",
     ],
+
+    [
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676bb75a8dbf46b14c6_finoa.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576761f08ef795f3e81f3_weglot.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576769620e443e3fcff1e_Rocketchat.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576766a98bfe19287c69c_meta.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63dda0828e5bc400eb4388c4_jungle-logo.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634d71bdc63d1381fe2bd886_Rainfall-logo.svg",
+
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/6335767587d487cc4118e5b3_doxel.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/6335767687d487860518e5b4_superai.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676491694236b84beba_maxxis.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676b51c813cd7c51542_Summon%20w.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676c3a9b155ac356d17_screenfeed%20w.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676bb75a8dbf46b14c6_finoa.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576761f08ef795f3e81f3_weglot.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576769620e443e3fcff1e_Rocketchat.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/633576766a98bfe19287c69c_meta.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63dda0828e5bc400eb4388c4_jungle-logo.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634d71bdc63d1381fe2bd886_Rainfall-logo.svg",
+
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/6335767587d487cc4118e5b3_doxel.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/6335767687d487860518e5b4_superai.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676491694236b84beba_maxxis.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676b51c813cd7c51542_Summon%20w.svg",
+      "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63357676c3a9b155ac356d17_screenfeed%20w.svg",
+    ],
   ];
+
   return (
-    <div className="py-20 mt-32">
-      {images.map((item) => (
-        <Marquee imgUrl={item} />
+    <div className="py-20 mt-32 w-full relative overflow-hidden">
+      {images.map((item, index) => (
+        <Marquee
+          key={index}
+          imageurls={item}
+          direction={index === 0 ? "left " : "right"}
+        />
       ))}
     </div>
   );

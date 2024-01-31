@@ -31,7 +31,7 @@ const Stripes = () => {
   return (
     <div className="flex justify-center align items-center mb-28">
       {data.map((elem, index) => {
-        return <Stripe val={elem} />;
+        return <Stripe key={index} val={elem} />;
       })}
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className=" max-w-screen-xl mx-auto pb-5  flex justify-between">
-      <div className="flex flex-col w-[48%] ">
+      <div className="flex flex-col basis-1/2 ">
         <h1 className="text-[12rem] font-medium">refokus.</h1>
         <div className="flex gap-9 width-full font-sm">
           <a href="#" className="text-sm font-thin text-zinc-400 ">
@@ -21,7 +21,7 @@ function Footer() {
         </div>
       </div>
       {/* /// */}
-      <div className=" w-[48%] flex justify-end items-center gap-10">
+      <div className=" basis-1/2 flex justify-end items-center gap-10">
         <div className="socials flex flex-col gap-1 w-20 h-40 text-sm font-thin text-zinc-400">
           <h5 className="mb-10">Socials</h5>
           <a href="#" className="text-sm font-thin text-zinc-400 ">
